@@ -1,0 +1,21 @@
+---
+interface Props {
+  /** Page title / logo text shown in the header bar. */
+  title: string;
+  /** Link destination for the title. Defaults to /. */
+  href?: string;
+  /**
+   * Start transparent (over the hero banner). site.ts removes .alt when
+   * the user scrolls past the banner. Only set on the home page.
+   */
+  alt?: boolean;
+}
+
+const { title, href = '/', alt = false } = Astro.props;
+---
+<header id="header" class:list={[{ alt }]}>
+  <h1><a href={href}>{title}</a></h1>
+  <nav>
+    <a href="#menu">Menu</a>
+  </nav>
+</header>

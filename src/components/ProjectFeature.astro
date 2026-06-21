@@ -1,0 +1,24 @@
+---
+/**
+ * Card-style project tile used inside the `.features` grid.
+ * Used for Nuga Bank (and any future card-layout projects).
+ */
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  image: ImageMetadata;
+  imageAlt: string;
+  href: string;
+}
+
+const { title, image, imageAlt, href } = Astro.props;
+---
+<article>
+  <a href="#" class="image">
+    <Image src={image} alt={imageAlt} width={400} format="webp" />
+  </a>
+  <h3 class="major">{title}</h3>
+  <slot />
+  <a href={href} class="special" target="_blank" rel="noopener">Learn more</a>
+</article>
