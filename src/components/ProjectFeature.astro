@@ -1,7 +1,7 @@
 ---
 /**
  * Card-style project tile used inside the `.features` grid.
- * Used for Nuga Bank (and any future card-layout projects).
+ * Image bleeds full card width (top), followed by title, slot content, and CTA(s).
  */
 import { Image } from 'astro:assets';
 
@@ -10,9 +10,11 @@ interface Props {
   image: ImageMetadata;
   imageAlt: string;
   href: string;
+  /** Optional second CTA — renders a "Try it live" link when provided. */
+  liveHref?: string;
 }
 
-const { title, image, imageAlt, href } = Astro.props;
+const { title, image, imageAlt, href, liveHref } = Astro.props;
 ---
 <article>
   <a href="#" class="image">
@@ -21,4 +23,5 @@ const { title, image, imageAlt, href } = Astro.props;
   <h3 class="major">{title}</h3>
   <slot />
   <a href={href} class="special" target="_blank" rel="noopener">Learn more</a>
+  {liveHref && <a href={liveHref} class="special" target="_blank" rel="noopener">Try it live</a>}
 </article>
