@@ -16,11 +16,13 @@ interface Props {
   image: ImageMetadata;
   imageAlt: string;
   href: string;
+  /** Optional second CTA — renders a "Try it live" link when provided. */
+  liveHref?: string;
   /** Flips clip direction and uses darker accent (style2). Default: false. */
   alt?: boolean;
 }
 
-const { title, image, imageAlt, href, alt = false } = Astro.props;
+const { title, image, imageAlt, href, liveHref, alt = false } = Astro.props;
 const wrapperStyle = alt ? 'style2' : 'style1';
 ---
 <section class:list={['wrapper', 'spotlight', wrapperStyle, { alt }]}>
@@ -32,6 +34,7 @@ const wrapperStyle = alt ? 'style2' : 'style1';
       <h2 class="major">{title}</h2>
       <slot />
       <a href={href} class="special" target="_blank" rel="noopener">Learn more</a>
+      {liveHref && <a href={liveHref} class="special" target="_blank" rel="noopener">Try it live</a>}
     </div>
   </div>
 </section>
