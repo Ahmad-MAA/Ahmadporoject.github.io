@@ -32,92 +32,15 @@ import eventflowDashboard from '../assets/images/eventflow_dashboard.jpg';
 
   <section id="wrapper">
 
-    <!-- Project 1 — alt style (even child → clip flipped, darker accent) -->
-    <ProjectSpotlight
-      title="MPC-BEV Simulator"
-      image={bevModel}
-      imageAlt="Model Predictive Control BEV simulator diagram"
-      href="https://github.com/Ahmad-MAA/MODEL_PREDICTIVE_CONTROL"
-      alt
-    >
-      <p>
-        A Python-based control simulation combining Model Predictive Control (MPC)
-        for vehicle path tracking with a simplified Battery-Electric Vehicle (BEV)
-        model. It integrates steering and torque control to maintain precise
-        trajectory tracking while modelling energy consumption, aerodynamic drag,
-        and regenerative braking. The simulator visualises real-time motion,
-        steering effort, and battery performance, achieving smooth path following
-        with over 97% SOC efficiency.
-      </p>
-    </ProjectSpotlight>
-
-    <!-- Project 2 -->
-    <ProjectSpotlight
-      title="CED_Stock_Data_Pipeline"
-      image={dataPipeline}
-      imageAlt="Cloud ETL data pipeline architecture diagram"
-      href="https://github.com/Ahmad-MAA/CED_Stock_Pipeline"
-    >
-      <p>
-        Developed a cloud-based ETL pipeline to automate the ingestion,
-        transformation, and loading of financial data for Capital Edge. Leveraged
-        Python, Apache Airflow, and cloud platforms (GCP and Azure) to create a
-        scalable, real-time solution that ensures data accuracy, consistency, and
-        operational efficiency. Key features include incremental data loading,
-        automated workflows, and seamless integration with financial APIs like
-        Alpha Vantage. This project streamlined data management, enabling Capital
-        Edge to focus on delivering actionable insights and superior client service.
-      </p>
-    </ProjectSpotlight>
-
-    <!-- Project 3 -->
-    <ProjectSpotlight
-      title="Renewable_Energy_Impact"
-      image={energyImage}
-      imageAlt="Renewable energy wind turbines and solar panels"
-      href="https://github.com/Ahmad-MAA/Renewable_Energy_Impact"
-    >
-      <p>
-        This project explores how increasing renewable energy penetration affects
-        wholesale electricity prices in Great Britain. Using real-world electricity
-        market data and a mathematical model based on the merit-order effect, the
-        analysis simulates how different levels of renewable integration (High,
-        Moderate, Low) could shape future pricing outcomes through 2040. The
-        project combines data cleaning, exploratory analysis, and scenario
-        modelling in Python to demonstrate that greater renewable penetration can
-        significantly reduce electricity costs. The findings are supported by
-        historical trends and validated through international case studies
-        (e.g., Germany and South Australia).
-      </p>
-    </ProjectSpotlight>
-
-    <!-- Project 4 — alt style -->
-    <ProjectSpotlight
-      title="ziko_logistics"
-      image={zikoArch}
-      imageAlt="Ziko logistics data architecture diagram"
-      href="https://github.com/Ahmad-MAA/ziko_logistics"
-      alt
-    >
-      <p>
-        This project focuses on automating and optimising data processes for
-        enhanced efficiency, scalability, and security. Leveraging Python, SQL,
-        Azure Data Lake Gen 2, GitHub, and Task Scheduler, it ensures high-quality
-        data extraction, transformation, and loading (ETL) workflows. Key benefits
-        include faster data processing, reduced downtime, improved data security,
-        and robust support for predictive analytics. The solution aligns with
-        strategic goals by delivering scalable, secure, and reliable data
-        engineering practices.
-      </p>
-    </ProjectSpotlight>
-
-    <!-- Project 6 -->
+    <!-- Project 1 — eventflow-stageos (most recent; rectangular image, explicit imageRight so
+         reordering never accidentally flips it) -->
     <ProjectSpotlight
       title="eventflow-stageos"
       image={eventflowDashboard}
       imageAlt="EventFlow stageOS event management dashboard"
       href="https://github.com/Ahmad-MAA/eventflow-stageos"
       liveHref="https://eventflow-stageos.vercel.app"
+      rectangular
     >
       <p>
         Developed a full-stack, multi-tenant event management platform as a
@@ -135,7 +58,90 @@ import eventflowDashboard from '../assets/images/eventflow_dashboard.jpg';
       </p>
     </ProjectSpotlight>
 
-    <!-- Project 5 — card layout -->
+    <!-- Project 2 — imageRight={true} locks image to RIGHT (was position 1/odd before reorder) -->
+    <ProjectSpotlight
+      title="MPC-BEV Simulator"
+      image={bevModel}
+      imageAlt="Model Predictive Control BEV simulator diagram"
+      href="https://github.com/Ahmad-MAA/MODEL_PREDICTIVE_CONTROL"
+      imageRight={true}
+      alt
+    >
+      <p>
+        A Python-based control simulation combining Model Predictive Control (MPC)
+        for vehicle path tracking with a simplified Battery-Electric Vehicle (BEV)
+        model. It integrates steering and torque control to maintain precise
+        trajectory tracking while modelling energy consumption, aerodynamic drag,
+        and regenerative braking. The simulator visualises real-time motion,
+        steering effort, and battery performance, achieving smooth path following
+        with over 97% SOC efficiency.
+      </p>
+    </ProjectSpotlight>
+
+    <!-- Project 3 — imageRight={false} locks image to LEFT (was position 2/even before reorder) -->
+    <ProjectSpotlight
+      title="CED_Stock_Data_Pipeline"
+      image={dataPipeline}
+      imageAlt="Cloud ETL data pipeline architecture diagram"
+      href="https://github.com/Ahmad-MAA/CED_Stock_Pipeline"
+      imageRight={false}
+    >
+      <p>
+        Developed a cloud-based ETL pipeline to automate the ingestion,
+        transformation, and loading of financial data for Capital Edge. Leveraged
+        Python, Apache Airflow, and cloud platforms (GCP and Azure) to create a
+        scalable, real-time solution that ensures data accuracy, consistency, and
+        operational efficiency. Key features include incremental data loading,
+        automated workflows, and seamless integration with financial APIs like
+        Alpha Vantage. This project streamlined data management, enabling Capital
+        Edge to focus on delivering actionable insights and superior client service.
+      </p>
+    </ProjectSpotlight>
+
+    <!-- Project 4 — imageRight={true} locks image to RIGHT (was position 3/odd before reorder) -->
+    <ProjectSpotlight
+      title="Renewable_Energy_Impact"
+      image={energyImage}
+      imageAlt="Renewable energy wind turbines and solar panels"
+      href="https://github.com/Ahmad-MAA/Renewable_Energy_Impact"
+      imageRight={true}
+    >
+      <p>
+        This project explores how increasing renewable energy penetration affects
+        wholesale electricity prices in Great Britain. Using real-world electricity
+        market data and a mathematical model based on the merit-order effect, the
+        analysis simulates how different levels of renewable integration (High,
+        Moderate, Low) could shape future pricing outcomes through 2040. The
+        project combines data cleaning, exploratory analysis, and scenario
+        modelling in Python to demonstrate that greater renewable penetration can
+        significantly reduce electricity costs. The findings are supported by
+        historical trends and validated through international case studies
+        (e.g., Germany and South Australia).
+      </p>
+    </ProjectSpotlight>
+
+    <!-- Project 5 — imageRight={false} locks image to LEFT (was position 4/even before reorder) -->
+    <ProjectSpotlight
+      title="ziko_logistics"
+      image={zikoArch}
+      imageAlt="Ziko logistics data architecture diagram"
+      href="https://github.com/Ahmad-MAA/ziko_logistics"
+      imageRight={false}
+      alt
+    >
+      <p>
+        This project focuses on automating and optimising data processes for
+        enhanced efficiency, scalability, and security. Leveraging Python, SQL,
+        Azure Data Lake Gen 2, GitHub, and Task Scheduler, it ensures high-quality
+        data extraction, transformation, and loading (ETL) workflows. Key benefits
+        include faster data processing, reduced downtime, improved data security,
+        and robust support for predictive analytics. The solution aligns with
+        strategic goals by delivering scalable, secure, and reliable data
+        engineering practices.
+      </p>
+    </ProjectSpotlight>
+
+    <!-- Project 6 — card layout -->
     <section class="wrapper alt style1">
       <div class="inner">
         <h2 class="major"></h2>
