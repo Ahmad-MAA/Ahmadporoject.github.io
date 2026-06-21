@@ -52,21 +52,27 @@
 		}
 
 		.close {
-			background-image: url('images/close.svg');
-			background-position: 75% 25%;
-			background-repeat: no-repeat;
-			background-size: 2em 2em;
+			@include vendor('appearance', 'none');
+			@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
+			background: transparent;
 			border: 0;
-			content: '';
+			color: _palette(fg-light);
+			cursor: pointer;
 			display: block;
-			height: 4em;
-			overflow: hidden;
+			font-size: 1.25em;
+			height: 3em;
+			line-height: 3em;
+			padding: 0;
 			position: absolute;
-			right: 0;
+			right: 0.5em;
 			text-align: center;
-			text-indent: 4em;
-			top: 0;
-			width: 4em;
+			text-indent: 0;
+			top: 0.5em;
+			width: 3em;
+
+			&:hover {
+				color: _palette(fg-bold);
+			}
 		}
 
 		.links {
