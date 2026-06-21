@@ -1,0 +1,19 @@
+{
+  "name": "ahmad-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^6.4.8",
+    "@tailwindcss/vite": "^4.3.1",
+    "tailwindcss": "^4.3.1",
+    "sharp": "^0.35.2"
+  },
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}
