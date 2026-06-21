@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Menu from '../components/Menu.astro';
+import Banner from '../components/Banner.astro';
+import ProjectSpotlight from '../components/ProjectSpotlight.astro';
+import ProjectFeature from '../components/ProjectFeature.astro';
+import Footer from '../components/Footer.astro';
+
+import bevModel from '../assets/images/BEV_model.png';
+import dataPipeline from '../assets/images/Data_Pipeline.jpeg';
+import energyImage from '../assets/images/ENERGY_IMAGE.jpg';
+import zikoArch from '../assets/images/ziko_architecture_image.png';
+import nugaBank from '../assets/images/nuga_bank.jpg';
+---
+<Layout title="Ahmad Musa Portfolio">
+  <Header title="PROJECTS" href="/" alt />
+  <Menu />
+
+  <Banner title="AHMAD MUSA PORTFOLIO WEBSITE">
+    <p style="text-transform: none;">
+      Explore Ahmad's portfolio of engineering and data-driven innovation projects,
+      spanning energy systems, automation, and intelligent control. Each project
+      demonstrates practical problem-solving, from optimising electric vehicle
+      control and renewable energy modelling to designing cloud-based data pipelines
+      and scalable ETL architectures. Together, they showcase Ahmad's ability to
+      merge engineering precision with data analytics, driving sustainable and
+      high-performance solutions across industries.
+    </p>
+  </Banner>
+
+  <section id="wrapper">
+
+    <!-- Project 1 — alt style (even child → clip flipped, darker accent) -->
+    <ProjectSpotlight
+      title="MPC-BEV Simulator"
+      image={bevModel}
+      imageAlt="Model Predictive Control BEV simulator diagram"
+      href="https://github.com/Ahmad-MAA/MODEL_PREDICTIVE_CONTROL"
+      alt
+    >
+      <p>
+        A Python-based control simulation combining Model Predictive Control (MPC)
+        for vehicle path tracking with a simplified Battery-Electric Vehicle (BEV)
+        model. It integrates steering and torque control to maintain precise
+        trajectory tracking while modelling energy consumption, aerodynamic drag,
+        and regenerative braking. The simulator visualises real-time motion,
+        steering effort, and battery performance, achieving smooth path following
+        with over 97% SOC efficiency.
+      </p>
+    </ProjectSpotlight>
+
+    <!-- Project 2 -->
+    <ProjectSpotlight
+      title="CED_Stock_Data_Pipeline"
+      image={dataPipeline}
+      imageAlt="Cloud ETL data pipeline architecture diagram"
+      href="https://github.com/Ahmad-MAA/CED_Stock_Pipeline"
+    >
+      <p>
+        Developed a cloud-based ETL pipeline to automate the ingestion,
+        transformation, and loading of financial data for Capital Edge. Leveraged
+        Python, Apache Airflow, and cloud platforms (GCP and Azure) to create a
+        scalable, real-time solution that ensures data accuracy, consistency, and
+        operational efficiency. Key features include incremental data loading,
+        automated workflows, and seamless integration with financial APIs like
+        Alpha Vantage.
+      </p>
+    </ProjectSpotlight>
+
+    <!-- Project 3 -->
+    <ProjectSpotlight
+      title="Renewable Energy Impact"
+      image={energyImage}
+      imageAlt="Renewable energy wind turbines and solar panels"
+      href="https://github.com/Ahmad-MAA/Renewable_Energy_Impact"
+    >
+      <p>
+        This project explores how increasing renewable energy penetration affects
+        wholesale electricity prices in Great Britain. Using real-world market data
+        and a mathematical model based on the merit-order effect, the analysis
+        simulates how different levels of renewable integration (High, Moderate,
+        Low) could shape future pricing outcomes through 2040. The findings are
+        supported by historical trends and validated through international case
+        studies (Germany and South Australia).
+      </p>
+    </ProjectSpotlight>
+
+    <!-- Project 4 — alt style -->
+    <ProjectSpotlight
+      title="Ziko Logistics"
+      image={zikoArch}
+      imageAlt="Ziko logistics data architecture diagram"
+      href="https://github.com/Ahmad-MAA/ziko_logistics"
+      alt
+    >
+      <p>
+        This project focuses on automating and optimising data processes for
+        enhanced efficiency, scalability, and security. Leveraging Python, SQL,
+        Azure Data Lake Gen 2, GitHub, and Task Scheduler, it ensures high-quality
+        ETL workflows. Key benefits include faster data processing, reduced
+        downtime, improved data security, and robust support for predictive
+        analytics.
+      </p>
+    </ProjectSpotlight>
+
+    <!-- Project 5 — card layout -->
+    <section class="wrapper alt style1">
+      <div class="inner">
+        <h2 class="major"></h2>
+        <section class="features">
+          <ProjectFeature
+            title="Nuga Bank ETL using PySpark"
+            image={nugaBank}
+            imageAlt="Big data and business intelligence analytics"
+            href="https://github.com/Ahmad-MAA/Nuga_bank_etl_case_study/tree/master"
+          >
+            <p>
+              This project modernised Nuga Bank's data exploration and cleaning
+              processes using PySpark to address inefficiencies and scalability
+              challenges. By automating data workflows, normalising datasets into
+              2NF/3NF, and storing cleaned data in PostgreSQL, the solution improved
+              data quality, scalability, and collaboration. Tools used: PySpark,
+              Python, SQL, PostgreSQL, and GitHub.
+            </p>
+          </ProjectFeature>
+        </section>
+      </div>
+    </section>
+
+  </section>
+
+  <Footer />
+</Layout>

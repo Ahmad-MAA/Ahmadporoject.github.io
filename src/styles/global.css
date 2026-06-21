@@ -1,18 +1,19 @@
 /*
-  Tailwind v4 — utilities only, no preflight.
-  Solid State SCSS handles resets and base styles.
-  Cascade layers mean Tailwind utilities yield to unlayered Solid State rules.
-*/
-@import "tailwindcss/theme" layer(theme);
-@import "tailwindcss/utilities" layer(utilities);
+  Global CSS custom properties — mirrors Solid State _vars.scss.
+  Available for inline styles and future component usage.
 
-/* Design tokens — mirrors Solid State _vars.scss so Tailwind classes are available */
-@theme {
+  Note: @tailwindcss/vite 4.x does not yet support Vite 8 (Rolldown) bundled
+  with Astro 6. Tailwind can be wired back once upstream support lands.
+  All visual design is handled by solid-state.scss in the meantime.
+*/
+:root {
   --color-ss-bg: #2e3141;
   --color-ss-accent: #4c5c96;
   --color-ss-border: rgba(255, 255, 255, 0.125);
   --color-ss-border-bg: rgba(255, 255, 255, 0.025);
   --color-ss-fg-light: rgba(255, 255, 255, 0.35);
-  --font-family-heading: "Raleway", Helvetica, sans-serif;
-  --font-family-body: "Source Sans Pro", Helvetica, sans-serif;
+  --font-heading: "Raleway", Helvetica, sans-serif;
+  --font-body: "Source Sans Pro", Helvetica, sans-serif;
+  --duration-menu: 350ms;
+  --duration-transition: 200ms;
 }

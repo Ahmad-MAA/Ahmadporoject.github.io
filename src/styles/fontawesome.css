@@ -1,7 +1,4 @@
-/*!
- * Font Awesome Free 5.15.4 (WOFF2-only build)
- * License: https://fontawesome.com/license/free
- */
+/* Font Awesome Free 5.15.4 (WOFF2-only build) - fontawesome.com/license/free */
 @font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/fa-brands-400.woff2) format("woff2")}
 @font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/fa-regular-400.woff2) format("woff2")}
 @font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:swap;src:url(/fonts/fa-solid-900.woff2) format("woff2")}
