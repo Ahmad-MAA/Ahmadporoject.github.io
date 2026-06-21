@@ -1,0 +1,37 @@
+---
+/**
+ * Full-width alternating image + text row (the "spotlight" section style).
+ *
+ * CSS automatically mirrors image/text order on every other child via
+ *   .spotlight:nth-child(2n-1) { flex-direction: row-reverse; text-align: right }
+ * so no `flip` prop is needed here.
+ *
+ * `alt` controls clip-triangle direction + colour variant (style2 vs style1).
+ * Pass alt=true for even-numbered projects to visually alternate the panels.
+ */
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  image: ImageMetadata;
+  imageAlt: string;
+  href: string;
+  /** Flips clip direction and uses darker accent (style2). Default: false. */
+  alt?: boolean;
+}
+
+const { title, image, imageAlt, href, alt = false } = Astro.props;
+const wrapperStyle = alt ? 'style2' : 'style1';
+---
+<section class:list={['wrapper', 'spotlight', wrapperStyle, { alt }]}>
+  <div class="inner">
+    <a href="#" class="image">
+      <Image src={image} alt={imageAlt} width={700} format="webp" />
+    </a>
+    <div class="content">
+      <h2 class="major">{title}</h2>
+      <slot />
+      <a href={href} class="special" target="_blank" rel="noopener">Learn more</a>
+    </div>
+  </div>
+</section>

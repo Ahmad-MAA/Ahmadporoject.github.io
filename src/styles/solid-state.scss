@@ -1,0 +1,45 @@
+// Solid State CSS entry point for Astro/Vite.
+// Replaces assets/sass/main.scss — two differences:
+//   1. Google Fonts removed (served via <link> in Layout.astro instead of blocking @import)
+//   2. FontAwesome removed (served via src/styles/fontawesome.css, WOFF2-only)
+
+@import '../../assets/sass/libs/vars';
+@import '../../assets/sass/libs/functions';
+@import '../../assets/sass/libs/mixins';
+@import '../../assets/sass/libs/vendor';
+@import '../../assets/sass/libs/breakpoints';
+@import '../../assets/sass/libs/html-grid';
+
+@include breakpoints((
+    xlarge:    (1281px, 1680px),
+    large:     (981px,  1280px),
+    medium:    (737px,  980px),
+    small:     (481px,  736px),
+    xsmall:    (361px,  480px),
+    xxsmall:   (null,   360px)
+));
+
+@import '../../assets/sass/base/reset';
+@import '../../assets/sass/base/page';
+@import '../../assets/sass/base/typography';
+
+@import '../../assets/sass/components/row';
+@import '../../assets/sass/components/section';
+@import '../../assets/sass/components/form';
+@import '../../assets/sass/components/box';
+@import '../../assets/sass/components/icon';
+@import '../../assets/sass/components/image';
+@import '../../assets/sass/components/list';
+@import '../../assets/sass/components/actions';
+@import '../../assets/sass/components/icons';
+@import '../../assets/sass/components/contact';
+@import '../../assets/sass/components/pagination';
+@import '../../assets/sass/components/table';
+@import '../../assets/sass/components/button';
+@import '../../assets/sass/components/features';
+
+@import '../../assets/sass/layout/header';
+@import '../../assets/sass/layout/menu';
+@import '../../assets/sass/layout/banner';
+@import '../../assets/sass/layout/wrapper';
+@import '../../assets/sass/layout/footer';

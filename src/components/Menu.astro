@@ -1,0 +1,15 @@
+---
+// No props — nav links are static. site.ts moves this element to <body>
+// root at runtime so it sits above #page-wrapper (required for CSS transitions).
+---
+<nav id="menu">
+  <div class="inner">
+    <h2>Menu</h2>
+    <ul class="links">
+      <li><a href="/">Projects</a></li>
+      <li><a href="/about">About Ahmad</a></li>
+    </ul>
+    <!-- button replaces <a class="close"> — no close.svg needed -->
+    <button type="button" class="close" aria-label="Close menu">&#x2715;</button>
+  </div>
+</nav>
